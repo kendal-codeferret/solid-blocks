@@ -1,0 +1,18 @@
+{
+  "block.solidblocks.white_block":      "White Block",
+  "block.solidblocks.orange_block":     "Orange Block",
+  "block.solidblocks.magenta_block":    "Magenta Block",
+  "block.solidblocks.light_blue_block": "Light Blue Block",
+  "block.solidblocks.yellow_block":     "Yellow Block",
+  "block.solidblocks.lime_block":       "Lime Block",
+  "block.solidblocks.pink_block":       "Pink Block",
+  "block.solidblocks.gray_block":       "Gray Block",
+  "block.solidblocks.light_gray_block": "Light Gray Block",
+  "block.solidblocks.cyan_block":       "Cyan Block",
+  "block.solidblocks.purple_block":     "Purple Block",
+  "block.solidblocks.blue_block":       "Blue Block",
+  "block.solidblocks.brown_block":      "Brown Block",
+  "block.solidblocks.green_block":      "Green Block",
+  "block.solidblocks.red_block":        "Red Block",
+  "block.solidblocks.black_block":      "Black Block"
+}

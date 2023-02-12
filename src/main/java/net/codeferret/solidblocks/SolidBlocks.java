@@ -1,6 +1,9 @@
 package net.codeferret.solidblocks;
 
 import com.mojang.logging.LogUtils;
+import net.codeferret.solidblocks.block.ModBlocks;
+import net.codeferret.solidblocks.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -24,6 +27,9 @@ public class SolidBlocks
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -41,7 +47,25 @@ public class SolidBlocks
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-
+        if(event.getTab() == CreativeModeTabs.COLORED_BLOCKS)
+        {
+            event.accept(ModBlocks.WHITE_BLOCK);
+            event.accept(ModBlocks.LIGHT_GRAY_BLOCK);
+            event.accept(ModBlocks.GRAY_BLOCK);
+            event.accept(ModBlocks.BLACK_BLOCK);
+            event.accept(ModBlocks.BROWN_BLOCK);
+            event.accept(ModBlocks.RED_BLOCK);
+            event.accept(ModBlocks.ORANGE_BLOCK);
+            event.accept(ModBlocks.YELLOW_BLOCK);
+            event.accept(ModBlocks.LIME_BLOCK);
+            event.accept(ModBlocks.GREEN_BLOCK);
+            event.accept(ModBlocks.CYAN_BLOCK);
+            event.accept(ModBlocks.LIGHT_BLUE_BLOCK);
+            event.accept(ModBlocks.BLUE_BLOCK);
+            event.accept(ModBlocks.PURPLE_BLOCK);
+            event.accept(ModBlocks.MAGENTA_BLOCK);
+            event.accept(ModBlocks.PINK_BLOCK);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
